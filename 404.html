@@ -5,9 +5,13 @@
   <title>Redirecionando...</title>
   <script type="text/javascript">
     // Redireciona para a página inicial após um pequeno atraso
-    setTimeout(function() {
-      window.location.replace("/ux-ui-design-solutions/");
-    }, 1000);
+    // Isso permite que o React Router DOM lide com o roteamento
+    var path = window.location.pathname;
+    var base = "/ux-ui-design-solutions/";
+    if (path.startsWith(base)) {
+      path = path.substring(base.length);
+    }
+    window.location.replace(base + "#" + path);
   </script>
 </head>
 <body>
