@@ -4,14 +4,8 @@
   <meta charset="utf-8">
   <title>Redirecionando...</title>
   <script type="text/javascript">
-    // Redireciona para a página inicial após um pequeno atraso
-    // Isso permite que o React Router DOM lide com o roteamento
-    var path = window.location.pathname;
-    var base = "/ux-ui-design-solutions/";
-    if (path.startsWith(base)) {
-      path = path.substring(base.length);
-    }
-    window.location.replace(base + "#" + path);
+    // Redireciona para a página inicial do basename
+    window.location.replace("/ux-ui-design-solutions/");
   </script>
 </head>
 <body>
